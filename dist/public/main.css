@@ -1,0 +1,100 @@
+div.board-container {
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+body {
+    background-color: rgb(50, 50, 50);
+}
+
+div.board {
+    display: grid;
+    grid-gap: 10px;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+}
+
+div.letter p {
+    width: 100%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: center;
+}
+
+div.letter {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    padding: 10px 10px 10px 10px;
+    margin: 5px;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 5px;
+    background-color: darkgrey;
+}
+
+div.letter.pop {
+    animation: pop 0.1s;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+div.center {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 20vh;
+    width: 100vw;
+}
+
+div#toast {
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background-color: aqua;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0%;
+    transition: opacity 0.25s;
+}
+
+div.toast-anim {
+    opacity: 100% !important;
+    transition: opacity 0s !important;
+    /*animation: toast-anim 1s;*/
+}
+
+/*@keyframes toast-anim {
+    0% {
+        opacity: 100%;
+    }
+    75% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}*/
